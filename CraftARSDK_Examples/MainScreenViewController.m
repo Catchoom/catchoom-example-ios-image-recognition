@@ -37,7 +37,7 @@
 
 - (IBAction)buttonPressed:(id)sender {
     
-    [[CraftARCloudRecognition sharedCloudImageRecognition] setCollectionWithToken:@"craftarexamples1" onSuccess:^{
+    [[CraftARCloudRecognition sharedCloudImageRecognition] setCollectionWithToken:@"cloudrecognition" onSuccess:^{
         NSLog(@"Token set!!");
     } andOnError:^(NSError *error) {
         NSLog(@"Error: %@", error);
