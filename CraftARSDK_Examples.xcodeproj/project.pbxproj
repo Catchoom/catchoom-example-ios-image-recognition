@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A000C5AC1992805E002A9786 /* Image Recognition.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A000C5AB1992805E002A9786 /* Image Recognition.jpg */; };
 		A000C5B5199282AA002A9786 /* CloudRecognitionOneShotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A000C5AF199282AA002A9786 /* CloudRecognitionOneShotViewController.m */; };
 		A000C5B6199282AA002A9786 /* SingleShot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A000C5B0199282AA002A9786 /* SingleShot.storyboard */; };
 		A000C5B7199282AA002A9786 /* CloudRecognitionFinderModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A000C5B3199282AA002A9786 /* CloudRecognitionFinderModeViewController.m */; };
@@ -26,12 +25,16 @@
 		A039ABD018A4F0510050D6F7 /* questionMark.png in Resources */ = {isa = PBXBuildFile; fileRef = A039ABC418A4F0510050D6F7 /* questionMark.png */; };
 		A039ABD118A4F0510050D6F7 /* questionMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A039ABC518A4F0510050D6F7 /* questionMark@2x.png */; };
 		A084A2FC1875BD1100EF452B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A084A2FB1875BD1100EF452B /* Main.storyboard */; };
+		A0ADF4FB1BF5F0CF00FD9E0A /* CraftARCloudImageRecognitionSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0ADF4FA1BF5F0CF00FD9E0A /* CraftARCloudImageRecognitionSDK.framework */; };
+		A0ADF50B1BF6059F00FD9E0A /* craftar_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0ADF50A1BF6059F00FD9E0A /* craftar_logo.jpg */; };
+		A0ADF50D1BF605A300FD9E0A /* kid_mobile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0ADF50C1BF605A300FD9E0A /* kid_mobile.jpg */; };
+		A0ADF50F1BF605A800FD9E0A /* shopping_cart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0ADF50E1BF605A800FD9E0A /* shopping_cart.jpg */; };
+		A0ADF5111BF605AD00FD9E0A /* business_card.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0ADF5101BF605AD00FD9E0A /* business_card.jpg */; };
 		A0D096821855E42100D231F0 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D096811855E42100D231F0 /* MobileCoreServices.framework */; };
 		A0D096841855E42F00D231F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D096831855E42F00D231F0 /* SystemConfiguration.framework */; };
 		A0D096881855E45000D231F0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D096871855E45000D231F0 /* AVFoundation.framework */; };
 		A0D0968A1855E46C00D231F0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D096891855E46C00D231F0 /* CoreMedia.framework */; };
 		A0F1DF2F184E5269006E20A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0F1DF2E184E5269006E20A0 /* Images.xcassets */; };
-		C0B1D8411A37533800C1904D /* CraftARSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B1D83F1A37533800C1904D /* CraftARSDK.framework */; };
 		C0B1D8421A37533800C1904D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B1D8401A37533800C1904D /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +52,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A000C5AB1992805E002A9786 /* Image Recognition.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Image Recognition.jpg"; path = "Reference images/Image Recognition.jpg"; sourceTree = "<group>"; };
 		A000C5AE199282AA002A9786 /* CloudRecognitionOneShotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudRecognitionOneShotViewController.h; sourceTree = "<group>"; };
 		A000C5AF199282AA002A9786 /* CloudRecognitionOneShotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudRecognitionOneShotViewController.m; sourceTree = "<group>"; };
 		A000C5B0199282AA002A9786 /* SingleShot.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SingleShot.storyboard; sourceTree = "<group>"; };
@@ -75,13 +77,17 @@
 		A039ABC418A4F0510050D6F7 /* questionMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = questionMark.png; path = Resources/questionMark.png; sourceTree = "<group>"; };
 		A039ABC518A4F0510050D6F7 /* questionMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "questionMark@2x.png"; path = "Resources/questionMark@2x.png"; sourceTree = "<group>"; };
 		A084A2FB1875BD1100EF452B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A0ADF4FA1BF5F0CF00FD9E0A /* CraftARCloudImageRecognitionSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CraftARCloudImageRecognitionSDK.framework; path = CraftARSDK_Examples/ExternalFrameworks/CraftARCloudImageRecognitionSDK.framework; sourceTree = "<group>"; };
+		A0ADF50A1BF6059F00FD9E0A /* craftar_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = craftar_logo.jpg; sourceTree = "<group>"; };
+		A0ADF50C1BF605A300FD9E0A /* kid_mobile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kid_mobile.jpg; sourceTree = "<group>"; };
+		A0ADF50E1BF605A800FD9E0A /* shopping_cart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = shopping_cart.jpg; sourceTree = "<group>"; };
+		A0ADF5101BF605AD00FD9E0A /* business_card.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = business_card.jpg; sourceTree = "<group>"; };
 		A0D096811855E42100D231F0 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A0D096831855E42F00D231F0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A0D096851855E43D00D231F0 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		A0D096871855E45000D231F0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A0D096891855E46C00D231F0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		A0F1DF2E184E5269006E20A0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C0B1D83F1A37533800C1904D /* CraftARSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CraftARSDK.framework; path = CraftARSDK_Examples/ExternalFrameworks/CraftARSDK.framework; sourceTree = "<group>"; };
 		C0B1D8401A37533800C1904D /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = CraftARSDK_Examples/ExternalFrameworks/Pods.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,8 +100,8 @@
 				A0D0968A1855E46C00D231F0 /* CoreMedia.framework in Frameworks */,
 				A0D096881855E45000D231F0 /* AVFoundation.framework in Frameworks */,
 				A0D096841855E42F00D231F0 /* SystemConfiguration.framework in Frameworks */,
-				C0B1D8411A37533800C1904D /* CraftARSDK.framework in Frameworks */,
 				A0D096821855E42100D231F0 /* MobileCoreServices.framework in Frameworks */,
+				A0ADF4FB1BF5F0CF00FD9E0A /* CraftARCloudImageRecognitionSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +131,7 @@
 		A01F3D6B1845FA5A003D8D62 = {
 			isa = PBXGroup;
 			children = (
-				C0B1D83F1A37533800C1904D /* CraftARSDK.framework */,
+				A0ADF4FA1BF5F0CF00FD9E0A /* CraftARCloudImageRecognitionSDK.framework */,
 				C0B1D8401A37533800C1904D /* Pods.framework */,
 				A01F3D7D1845FA5A003D8D62 /* CraftARSDK_Examples */,
 				A01F3D761845FA5A003D8D62 /* Frameworks */,
@@ -201,7 +207,10 @@
 		A039ABB918A4E0360050D6F7 /* Reference images */ = {
 			isa = PBXGroup;
 			children = (
-				A000C5AB1992805E002A9786 /* Image Recognition.jpg */,
+				A0ADF50A1BF6059F00FD9E0A /* craftar_logo.jpg */,
+				A0ADF50C1BF605A300FD9E0A /* kid_mobile.jpg */,
+				A0ADF50E1BF605A800FD9E0A /* shopping_cart.jpg */,
+				A0ADF5101BF605AD00FD9E0A /* business_card.jpg */,
 			);
 			name = "Reference images";
 			sourceTree = "<group>";
@@ -234,7 +243,7 @@
 		A01F3D6C1845FA5A003D8D62 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Luis Martinell Andreu";
 				TargetAttributes = {
 					A01F3D731845FA5A003D8D62 = {
@@ -266,16 +275,19 @@
 			files = (
 				A084A2FC1875BD1100EF452B /* Main.storyboard in Resources */,
 				A01F3D821845FA5A003D8D62 /* InfoPlist.strings in Resources */,
+				A0ADF50B1BF6059F00FD9E0A /* craftar_logo.jpg in Resources */,
 				A0F1DF2F184E5269006E20A0 /* Images.xcassets in Resources */,
 				A039ABCB18A4F0510050D6F7 /* craftAR_logo.png in Resources */,
 				A039ABD018A4F0510050D6F7 /* questionMark.png in Resources */,
 				A039ABC818A4F0510050D6F7 /* craftAR_c.png in Resources */,
 				A039ABCC18A4F0510050D6F7 /* craftAR_logo@2x.png in Resources */,
-				A000C5AC1992805E002A9786 /* Image Recognition.jpg in Resources */,
 				A039ABCE18A4F0510050D6F7 /* play.png in Resources */,
 				A039ABCA18A4F0510050D6F7 /* craftAR_logo-iPad@2x.png in Resources */,
+				A0ADF50F1BF605A800FD9E0A /* shopping_cart.jpg in Resources */,
+				A0ADF5111BF605AD00FD9E0A /* business_card.jpg in Resources */,
 				A000C5B8199282AA002A9786 /* FinderMode.storyboard in Resources */,
 				A000C5B6199282AA002A9786 /* SingleShot.storyboard in Resources */,
+				A0ADF50D1BF605A300FD9E0A /* kid_mobile.jpg in Resources */,
 				A039ABCF18A4F0510050D6F7 /* play@2x.png in Resources */,
 				A039ABD118A4F0510050D6F7 /* questionMark@2x.png in Resources */,
 				A039ABC918A4F0510050D6F7 /* craftAR_logo-iPad.png in Resources */,
@@ -296,7 +308,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ! -d \"$PROJECT_DIR/CraftARSDK_Examples/ExternalFrameworks/CraftARSDK.framework\" ]; then\n    echo \"error: Missing CraftARSDK files in CraftARSDK_Examples/ExternalFrameworks/\" 1>&2;\n    osascript $PROJECT_DIR/CraftARSDK_Examples/scripts/launch_sdk_download \"$PROJECT_DIR\" &\n    exit 1\nfi\n\nif [ ! -d \"$PROJECT_DIR/CraftARSDK_Examples/ExternalFrameworks/Pods.framework\" ]; then\n    echo \"error: Missing CraftARSDK files in CraftARSDK_Examples/ExternalFrameworks/\" 1>&2;\n    osascript $PROJECT_DIR/CraftARSDK_Examples/scripts/launch_sdk_download \"$PROJECT_DIR\" &\n    exit 1\nfi\n";
+			shellScript = "if [ ! -d \"$PROJECT_DIR/CraftARSDK_Examples/ExternalFrameworks/CraftARCloudImageRecognitionSDK.framework\" ]; then\n    echo \"error: Missing CraftARSDK files in CraftARSDK_Examples/ExternalFrameworks/\" 1>&2;\n    osascript $PROJECT_DIR/CraftARSDK_Examples/scripts/launch_sdk_download \"$PROJECT_DIR\" &\n    exit 1\nfi\n\nif [ ! -d \"$PROJECT_DIR/CraftARSDK_Examples/ExternalFrameworks/Pods.framework\" ]; then\n    echo \"error: Missing CraftARSDK files in CraftARSDK_Examples/ExternalFrameworks/\" 1>&2;\n    osascript $PROJECT_DIR/CraftARSDK_Examples/scripts/launch_sdk_download \"$PROJECT_DIR\" &\n    exit 1\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -345,6 +357,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -361,6 +374,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -392,6 +406,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -415,7 +430,8 @@
 				INFOPLIST_FILE = "CraftARSDK_Examples/CraftARSDK_Examples-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.catchoom.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CraftARSDK_Examples;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -442,6 +458,7 @@
 				INFOPLIST_FILE = "CraftARSDK_Examples/CraftARSDK_Examples-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.catchoom.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CraftARSDK_Examples;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";

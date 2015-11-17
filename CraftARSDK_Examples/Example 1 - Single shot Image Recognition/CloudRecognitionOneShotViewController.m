@@ -7,10 +7,10 @@
 //
 
 #import "CloudRecognitionOneShotViewController.h"
-#import <CraftARSDK/CraftARSDK.h>
-#import <CraftARSDK/CraftARItem.h>
+#import <CraftARCloudImageRecognitionSDK/CraftARSDK.h>
+#import <CraftARCloudImageRecognitionSDK/CraftARCloudRecognition.h>
 
-@interface CloudRecognitionOneShotViewController () <CraftARSDKProtocol, CraftARCloudRecognitionProtocol> {
+@interface CloudRecognitionOneShotViewController () <CraftARSDKProtocol, SearchProtocol> {
     CraftARSDK *_sdk;
     CraftARCloudRecognition *_crs;
 }
@@ -38,9 +38,6 @@
     _sdk = [CraftARSDK sharedCraftARSDK];
     _sdk.delegate = self;
     
-    _crs = [_sdk getCloudRecognitionInterface];
-    _crs.delegate = self;
-    
 }
 
 - (void) viewWillAppear:(BOOL) animated {
@@ -56,22 +53,29 @@
 
 - (void) didStartCapture {
     self._previewOverlay.hidden = NO;
+    
+    _crs = [CraftARCloudRecognition sharedCloudImageRecognition];
+    _crs.delegate = self;
+    
+    _sdk.searchControllerDelegate = _crs.mSearchController;
 }
 
 - (IBAction)snapPhotoToSearch:(id)sender {
     self._previewOverlay.hidden = YES;
     self._scanningOverlay.hidden = NO;
     [self._scanningOverlay setNeedsDisplay];
-    [_crs singleShotSearch];
+    [_sdk singleShotSearch];
     
 }
 
-- (void) didGetSearchResults:(NSArray *)resultItems {
+- (void) didGetSearchResults:(NSArray *)results {
     self._scanningOverlay.hidden = YES;
     
-    if ([resultItems count] >= 1) {
+    if ([results count] >= 1) {
         // Found one item, launch its content on a webView:
-        CraftARItem *item = [resultItems objectAtIndex:0];
+        CraftARSearchResult* result = [results objectAtIndex:0];
+        
+        CraftARItem *item = result.item;
         
         // Open URL in Webview
         UIViewController *webViewController = [[UIViewController alloc] init];
@@ -82,7 +86,7 @@
         [self.navigationController pushViewController:webViewController animated:YES];
         self._previewOverlay.hidden = NO;
         self._scanningOverlay.hidden = YES;
-        [_sdk unfreezeCapture];
+        [[_sdk getCamera] restartCapture];
         
     } else {
         UIAlertView *alert = [[UIAlertView alloc] init];
@@ -96,15 +100,15 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     self._previewOverlay.hidden = NO;
-    [_sdk unfreezeCapture];
+    [[_sdk getCamera] restartCapture];
 }
 
-- (void) didFailWithError:(CraftARSDKError *)error {
+-(void) didFailSearchWithError:(NSError *)error{
     // Check the error type
     NSLog(@"Error calling CRS: %@", [error localizedDescription]);
     self._previewOverlay.hidden = NO;
     self._scanningOverlay.hidden = YES;
-    [_sdk unfreezeCapture];
+    [[_sdk getCamera] restartCapture];
 }
 
 - (void) didValidateToken {

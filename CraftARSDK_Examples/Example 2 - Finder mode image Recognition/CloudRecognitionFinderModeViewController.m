@@ -7,10 +7,10 @@
 //
 
 #import "CloudRecognitionFinderModeViewController.h"
-#import <CraftARSDK/CraftARSDK.h>
-#import <CraftARSDK/CraftARItem.h>
+#import <CraftARCloudImageRecognitionSDK/CraftARSDK.h>
+#import <CraftARCloudImageRecognitionSDK/CraftARCloudRecognition.h>
 
-@interface CloudRecognitionFinderModeViewController () <CraftARSDKProtocol, CraftARCloudRecognitionProtocol> {
+@interface CloudRecognitionFinderModeViewController () <CraftARSDKProtocol, SearchProtocol> {
     CraftARSDK *_sdk;
     CraftARCloudRecognition *_crs;
     bool _captureStarted;
@@ -38,10 +38,6 @@
     // setup the CraftAR SDK
     _sdk = [CraftARSDK sharedCraftARSDK];
     _sdk.delegate = self;
-    
-    _crs = [_sdk getCloudRecognitionInterface];
-    _crs.delegate = self;
-    
 }
 
 - (void) viewWillAppear:(BOOL) animated {
@@ -50,31 +46,39 @@
     [_sdk startCaptureWithView:self._preview];
     
     if (_captureStarted) {
-        _sdk.delegate = self;
-        [_crs startFinderMode];
+        _crs = [CraftARCloudRecognition sharedCloudImageRecognition];
+        _crs.delegate = self;
+        _sdk.searchControllerDelegate = _crs.mSearchController;
+        [_sdk startFinder];
     }
 }
 
 #pragma mark -
 
 
-#pragma mark Snap Photo mode implementation
+#pragma mark Finder mode implementation
 
 - (void) didStartCapture {
     _captureStarted=YES;
     self._scanningOverlay.hidden = NO;
     [self._scanningOverlay setNeedsDisplay];
-    [_crs startFinderMode];
+    
+    _crs = [CraftARCloudRecognition sharedCloudImageRecognition];
+    _crs.delegate = self;
+    _sdk.searchControllerDelegate = _crs.mSearchController;
+    [_sdk startFinder];
 }
 
 
-- (void) didGetSearchResults:(NSArray *)resultItems {
+- (void) didGetSearchResults:(NSArray *)results {
     self._scanningOverlay.hidden = YES;
-    [_crs stopFinderMode];
+    [_sdk stopFinder];
     
-    if ([resultItems count] >= 1) {
+    if ([results count] >= 1) {
         // Found one item, launch its content on a webView:
-        CraftARItem *item = [resultItems objectAtIndex:0];
+        CraftARSearchResult* result = [results objectAtIndex:0];
+        
+        CraftARItem *item = result.item;
         
         // Open URL in Webview
         UIViewController *webViewController = [[UIViewController alloc] init];
@@ -87,15 +91,15 @@
     } else {
         self._scanningOverlay.hidden = NO;
         [self._scanningOverlay setNeedsDisplay];
-        [_crs startFinderMode];
+        [_sdk startFinder];
     }
 }
 
 
-- (void) didFailWithError:(CraftARSDKError *)error {
+- (void) didFailSearchWithError:(NSError *)error {
     self._scanningOverlay.hidden = NO;
     [self._scanningOverlay setNeedsDisplay];
-    [_crs startFinderMode];
+    [_sdk startFinder];
 }
 
 - (void) didValidateToken {

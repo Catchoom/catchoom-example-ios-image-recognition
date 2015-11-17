@@ -21,7 +21,7 @@
 // DEALINGS IN THE SOFTWARE.
 
 #import "MainScreenViewController.h"
-#import <CraftARSDK/CraftARSDK.h>
+#import <CraftARCloudImageRecognitionSDK/CraftARCloudRecognition.h>
 
 @interface MainScreenViewController ()
 
@@ -37,7 +37,11 @@
 
 - (IBAction)buttonPressed:(id)sender {
     
-    [[[CraftARSDK sharedCraftARSDK] getCloudRecognitionInterface] setToken:@"craftarexamples1"];
+    [[CraftARCloudRecognition sharedCloudImageRecognition] setCollectionWithToken:@"cloudrecognition" onSuccess:^{
+        NSLog(@"Token set!!");
+    } andOnError:^(NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
     
     UIViewController *target;
     if (sender == self._singleShotRecognitionButton) {
